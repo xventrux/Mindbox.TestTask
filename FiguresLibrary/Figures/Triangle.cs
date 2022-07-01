@@ -34,7 +34,7 @@ namespace FiguresLibrary.Figures
         {
             double p = (A + B + C) / 2;
 
-            return Math.Sqrt(p * (p - A) * (p - B) * (p - C));
+            return Math.Round(Math.Sqrt(p * (p - A) * (p - B) * (p - C)), 2);
         }
     }
 }

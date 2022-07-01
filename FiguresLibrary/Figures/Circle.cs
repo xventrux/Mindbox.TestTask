@@ -22,7 +22,7 @@ namespace FiguresLibrary.Figures
 
         public double getArea()
         {
-            return Math.PI * Math.Pow(Radius, 2);
+            return Math.Round(Math.PI * Math.Pow(Radius, 2), 2);
         }
     }
 }
