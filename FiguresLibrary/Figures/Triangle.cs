@@ -36,5 +36,28 @@ namespace FiguresLibrary.Figures
 
             return Math.Round(Math.Sqrt(p * (p - A) * (p - B) * (p - C)), 2);
         }
+
+        public bool isRectangular()
+        {
+            bool isRec1 = isRectangular(A, B);
+            bool isRec2 = isRectangular(B, C);
+            bool isRec3 = isRectangular(C, A);
+
+            if(isRec1 || isRec2 || isRec3)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        bool isRectangular(double a, double b)
+        {
+            double s = Math.Round((a * b) / 2.0, 2);
+            if (getArea() == s)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
