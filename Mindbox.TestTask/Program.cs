@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FiguresLibrary.Base;
+using FiguresLibrary.Figures;
+using System;
 
 namespace Mindbox.TestTask
 {
@@ -7,7 +9,11 @@ namespace Mindbox.TestTask
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IFigure circle = new Circle(2);
+            Console.WriteLine($"Площадь окружности с радиусом 2 = {circle.getArea()}");
+
+            IFigure triangle = new Triangle(3, 4, 5);
+            Console.WriteLine($"Площадь треугольника со сторонами 3 4 5 = {triangle.getArea()}");
         }
     }
 }
