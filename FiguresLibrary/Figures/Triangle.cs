@@ -17,6 +17,14 @@ namespace FiguresLibrary.Figures
 
         public Triangle(double a, double b, double c)
         {
+            if(a < 0 || b < 0 || c < 0)
+            {
+                throw new ArgumentException("Стороны треугольника не могут быть отрицательными");
+            }
+            if(!(a + b > c && a + c > b && b + c > a))
+            {
+                throw new ArgumentException("Треугольника не существует");
+            }
             A = a;
             B = b;
             C = c;

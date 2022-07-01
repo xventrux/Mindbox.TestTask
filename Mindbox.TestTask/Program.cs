@@ -12,8 +12,16 @@ namespace Mindbox.TestTask
             IFigure circle = new Circle(2);
             Console.WriteLine($"Площадь окружности с радиусом 2 = {circle.getArea()}");
 
-            IFigure triangle = new Triangle(3, 4, 5);
-            Console.WriteLine($"Площадь треугольника со сторонами 3 4 5 = {triangle.getArea()}");
+            try
+            {
+                IFigure triangle = new Triangle(3, 4, 5);
+                Console.WriteLine($"Площадь треугольника со сторонами 3 4 5 = {triangle.getArea()}");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
         }
     }
 }
