@@ -9,8 +9,16 @@ namespace Mindbox.TestTask
 
         static void Main(string[] args)
         {
-            IFigure circle = new Circle(2);
-            Console.WriteLine($"Площадь окружности с радиусом 2 = {circle.getArea()}");
+
+            try
+            {
+                IFigure circle = new Circle(2);
+                Console.WriteLine($"Площадь окружности с радиусом 2 = {circle.getArea()}");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             try
             {

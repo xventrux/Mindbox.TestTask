@@ -13,6 +13,10 @@ namespace FiguresLibrary.Figures
 
         public Circle(double radius)
         {
+            if(radius < 0)
+            {
+                throw new ArgumentException("Радиус не может быть меньше нуля");
+            }
             Radius = radius;
         }
 
